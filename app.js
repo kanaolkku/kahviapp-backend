@@ -8,13 +8,14 @@ const coffeesRouter = require("./controllers/coffees");
 app.use(cors());
 // automatically parses .json responses
 app.use(express.json());
+// serve static files from /public
 app.use(express.static("public"));
 // enable coffee router from the controller
 app.use("/api/coffees", coffeesRouter);
 // returns the react app
 app.get("/", (req, res) => {
   res.sendFile("index.html", {
-    root: path.join(__dirname, "./build/"),
+    root: path.join(__dirname, "./public/"),
   });
 });
 

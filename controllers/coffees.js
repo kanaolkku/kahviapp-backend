@@ -24,17 +24,22 @@ coffeeRouter.get("/", (req, res) => {
 });
 
 coffeeRouter.post("/", (req, res) => {
+  //get coffee data from request
   const { name, weight, price, roast } = req.body;
 
+  //make sure the data is valid
   if (validateNumericFields([weight, price, roast])) {
     //get coffee data from the file
     const coffeeData = JSON.parse(
       fs.readFileSync("coffees.json", { encoding: "utf-8" })
     );
+
     //add new coffee to the list
     coffeeData.push({ name, weight, price, roast });
+
     //send new list back to the file
     fs.writeFileSync("coffees.json", JSON.stringify(coffeeData, null, 4));
+
     // send succesfful response
     res.json({ message: "Coffee saved" });
   } else {
