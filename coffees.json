@@ -1,32 +1,8 @@
 [
-    {
-        "name": "coffee 1",
-        "weight": 500,
-        "price": 1.99,
-        "roast": "5"
-    },
-    {
-        "name": "coffee 1",
-        "weight": 500,
-        "price": 1.99,
-        "roast": "5"
-    },
-    {
-        "name": "coffee 1",
-        "weight": 500,
-        "price": 1.99,
-        "roast": "5"
-    },
-    {
-        "name": "coffee 1",
-        "weight": 500,
-        "price": 1.99,
-        "roast": "5"
-    },
-    {
-        "name": "coffee 1",
-        "weight": 500,
-        "price": 1.99,
-        "roast": "5"
-    }
+  {
+    "name": "Juhla Mokka",
+    "weight": 500,
+    "price": 5.8,
+    "roast": 1
+  }
 ]
